@@ -87,7 +87,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
             }
         });
 
-        holder.txtFooter.setText("Gender: " + gender);
+        holder.txtFooter.setText("Gender : " + gender);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
