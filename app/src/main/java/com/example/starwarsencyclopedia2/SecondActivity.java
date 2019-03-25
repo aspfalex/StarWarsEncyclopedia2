@@ -1,7 +1,7 @@
 package com.example.starwarsencyclopedia2;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -12,7 +12,7 @@ import java.util.List;
 
 
 
-public class SecondActivity extends Activity {
+public class SecondActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -43,5 +43,8 @@ public class SecondActivity extends Activity {
         mAdapter = new MyAdapter(input);
         recyclerView.setAdapter(mAdapter);
     }
+
+
+
 
 }

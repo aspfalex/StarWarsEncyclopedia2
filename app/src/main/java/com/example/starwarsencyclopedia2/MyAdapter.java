@@ -13,7 +13,6 @@ import com.example.starwarsencyclopedia2.model.People;
 import java.util.List;
 
 
-
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
 {
     private List<People> listValues;
@@ -52,6 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
         notifyItemRemoved(position);
     }
 
+
     // Provide a suitable constructor (depends on the kind of dataset)
     public MyAdapter(List<People> listValues)
     {
@@ -77,15 +77,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
         // - replace the contents of the view with that element
         People currentPeople = listValues.get(position);
         final String name = currentPeople.getName();
+        final String gender = currentPeople.getGender();
         holder.txtHeader.setText(name);
         holder.txtHeader.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+              remove(position);
+
             }
         });
 
-        holder.txtFooter.setText("Footer: " + name);
+        holder.txtFooter.setText("Gender: " + gender);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
