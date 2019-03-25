@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.starwarsencyclopedia2.model.Pokemon;
+import com.example.starwarsencyclopedia2.model.People;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
 {
-    private List<Pokemon> listValues;
+    private List<People> listValues;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -40,7 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
         }
     }
 
-    public void add(int position, Pokemon item)
+    public void add(int position, People item)
     {
         listValues.add(position, item);
         notifyItemInserted(position);
@@ -53,7 +53,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<Pokemon> listValues)
+    public MyAdapter(List<People> listValues)
     {
         this.listValues = listValues;
     }
@@ -75,8 +75,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
     public void onBindViewHolder(CelluleJava holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        Pokemon currentPokemon = listValues.get(position);
-        final String name = currentPokemon.getName();
+        People currentPeople = listValues.get(position);
+        final String name = currentPeople.getName();
         holder.txtHeader.setText(name);
         holder.txtHeader.setOnClickListener(new OnClickListener() {
             @Override

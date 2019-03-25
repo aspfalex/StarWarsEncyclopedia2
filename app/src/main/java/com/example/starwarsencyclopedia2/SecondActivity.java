@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.starwarsencyclopedia2.model.Pokemon;
+import com.example.starwarsencyclopedia2.model.People;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class SecondActivity extends Activity {
         // in content do not change the layout size
         // of the RecyclerView
     }
-    public void showList(List<Pokemon> input){
+    public void showList(List<People> input){
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);

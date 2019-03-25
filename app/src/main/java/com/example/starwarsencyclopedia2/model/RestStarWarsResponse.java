@@ -1,14 +1,13 @@
 package com.example.starwarsencyclopedia2.model;
 
-
 import java.util.List;
 
-public class RestPokemonResponse {
+public class RestStarWarsResponse {
 
     private int count;
     private String next;
     private String previous;
-    private List<Pokemon> results;
+    private List<People> results;
 
     public int getCount() {
         return count;
@@ -34,11 +33,11 @@ public class RestPokemonResponse {
         this.previous = previous;
     }
 
-    public List<Pokemon> getResults() {
+    public List<People> getResults() {
         return results;
     }
 
-    public void setResults(List<Pokemon> results) {
+    public void setResults(List<People> results) {
         this.results = results;
     }
 }

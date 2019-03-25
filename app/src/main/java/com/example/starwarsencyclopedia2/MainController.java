@@ -1,12 +1,11 @@
 package com.example.starwarsencyclopedia2;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import android.util.Log;
 
-import com.example.starwarsencyclopedia2.model.Pokemon;
-import com.example.starwarsencyclopedia2.model.RestPokemonResponse;
+import com.example.starwarsencyclopedia2.model.People;
+import com.example.starwarsencyclopedia2.model.RestStarWarsResponse;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
@@ -38,24 +37,24 @@ public class MainController {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://pokeapi.co/api/v2/")
+                .baseUrl("https://swapi.co/api/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        RestPokemonApi restPokemonApi = retrofit.create(RestPokemonApi.class);
+        RestSWAPI restSWAPI = retrofit.create(RestSWAPI.class);
 
-        Call<RestPokemonResponse> call = restPokemonApi.getListPokemon();
-        call.enqueue(new Callback<RestPokemonResponse>() {
+        Call<RestStarWarsResponse> call = restSWAPI.getListPeople();
+        call.enqueue(new Callback<RestStarWarsResponse>() {
             @Override
-            public void onResponse(Call<RestPokemonResponse> call,
-                                   Response<RestPokemonResponse> response) {
-                RestPokemonResponse restPokemonResponse = response.body();
-                List<Pokemon> listPokemon = restPokemonResponse.getResults();
-                activity.showList(listPokemon);
+            public void onResponse(Call<RestStarWarsResponse> call,
+                                   Response<RestStarWarsResponse> response) {
+                RestStarWarsResponse restSWAPI = response.body();
+                List<People> listPeople = restSWAPI.getResults();
+                activity.showList(listPeople);
             }
 
             @Override
-            public void onFailure(Call<RestPokemonResponse> call, Throwable t) {
+            public void onFailure(Call<RestStarWarsResponse> call, Throwable t) {
                 Log.d("ERROR", "Api Error");
             }
         });

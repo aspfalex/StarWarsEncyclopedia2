@@ -1,7 +1,6 @@
 package com.example.starwarsencyclopedia2.model;
 
-
-public class Pokemon {
+public class People {
 
     private String name;
     private String url;
