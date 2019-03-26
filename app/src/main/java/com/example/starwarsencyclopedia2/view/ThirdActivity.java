@@ -1,8 +1,10 @@
-package com.example.starwarsencyclopedia2;
+package com.example.starwarsencyclopedia2.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.example.starwarsencyclopedia2.R;
 
 public class ThirdActivity extends AppCompatActivity {
 

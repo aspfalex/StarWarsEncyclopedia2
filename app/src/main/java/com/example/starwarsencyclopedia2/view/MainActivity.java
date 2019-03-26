@@ -1,9 +1,11 @@
-package com.example.starwarsencyclopedia2;
+package com.example.starwarsencyclopedia2.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.example.starwarsencyclopedia2.R;
 
 public class MainActivity extends AppCompatActivity
 {

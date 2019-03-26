@@ -1,4 +1,4 @@
-package com.example.starwarsencyclopedia2;
+package com.example.starwarsencyclopedia2.controller;
 
 import com.example.starwarsencyclopedia2.model.RestStarWarsResponse;
 

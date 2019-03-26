@@ -1,4 +1,4 @@
-package com.example.starwarsencyclopedia2;
+package com.example.starwarsencyclopedia2.controller;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.starwarsencyclopedia2.R;
 import com.example.starwarsencyclopedia2.model.People;
 
 import java.util.List;
@@ -115,6 +116,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
         });
 
         holder.txtFooter.setText("Gender : " + gender);
+        holder.txtFooter.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(currentPeople);
+            }
+
+        });
+
+        holder.image.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(currentPeople);
+            }
+
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)

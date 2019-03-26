@@ -1,9 +1,10 @@
-package com.example.starwarsencyclopedia2;
+package com.example.starwarsencyclopedia2.controller;
 
 import android.util.Log;
 
 import com.example.starwarsencyclopedia2.model.People;
 import com.example.starwarsencyclopedia2.model.RestStarWarsResponse;
+import com.example.starwarsencyclopedia2.view.SecondActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

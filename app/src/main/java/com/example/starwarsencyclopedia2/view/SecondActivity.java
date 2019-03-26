@@ -1,4 +1,4 @@
-package com.example.starwarsencyclopedia2;
+package com.example.starwarsencyclopedia2.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.starwarsencyclopedia2.controller.MainController;
+import com.example.starwarsencyclopedia2.controller.MyAdapter;
+import com.example.starwarsencyclopedia2.R;
 import com.example.starwarsencyclopedia2.model.People;
 
 import java.util.List;
