@@ -49,6 +49,7 @@ public class MainController {
             public void onResponse(Call<RestStarWarsResponse> call,
                                    Response<RestStarWarsResponse> response) {
                 RestStarWarsResponse restSWAPI = response.body();
+
                 List<People> listPeople = restSWAPI.getResults();
                 activity.showList(listPeople);
             }

@@ -1,5 +1,6 @@
 package com.example.starwarsencyclopedia2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -40,10 +41,17 @@ public class SecondActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         // define an adapter
-        mAdapter = new MyAdapter(input);
+        mAdapter = new MyAdapter(input, new MyAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(People item){
+                Intent intent = new Intent( SecondActivity.this, ThirdActivity.class);
+                //intent.putExtra("nom", item.getName());
+                //intent.putExtra("gender", item.getGender());
+                SecondActivity.this.startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
-
 
 
 

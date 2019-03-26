@@ -3,7 +3,6 @@ package com.example.starwarsencyclopedia2;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +14,31 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
 {
+
+
+    public interface OnItemClickListener{
+        void onItemClick(People item);
+    }
+
+
+
     private List<People> listValues;
+    private final OnItemClickListener listener;
+
+
+
+    // Provide a suitable constructor (depends on the kind of dataset)
+    public MyAdapter(List<People> listValues, OnItemClickListener listener)
+    {
+        this.listValues = listValues;
+        this.listener = listener;
+    }
+
+
+
+
+
+
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -52,11 +75,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
     }
 
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<People> listValues)
-    {
-        this.listValues = listValues;
-    }
+
 
     // Create new views (invoked by the layout manager)
     @Override
@@ -75,16 +94,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
     public void onBindViewHolder(CelluleJava holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        People currentPeople = listValues.get(position);
+        final People currentPeople = listValues.get(position);
         final String name = currentPeople.getName();
         final String gender = currentPeople.getGender();
         holder.txtHeader.setText(name);
-        holder.txtHeader.setOnClickListener(new OnClickListener() {
+        holder.txtHeader.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              remove(position);
-
+                listener.onItemClick(currentPeople);
             }
+
         });
 
         holder.txtFooter.setText("Gender : " + gender);
