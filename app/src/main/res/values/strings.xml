@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">STAR WARS Encyclopedia</string>
+    <string name="Text_name"> %1s </string>
+    <string name="Text_gender"> GENDER : %1s </string>
+    <string name="Text_height"> HEIGHT : %1s </string>
+    <string name="Text_mass"> MASS : %1s </string>
+    <string name="Text_hairColor"> HAIR COLOR : %1s </string>
+    <string name="Text_eyeColor"> EYE COLOR : %1s </string>
+    <string name="Text_birthYear">BIRTH YEAR : %1s </string>
+
 </resources>

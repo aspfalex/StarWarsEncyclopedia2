@@ -38,7 +38,7 @@
         android:layout_marginRight="8dp"
 
         android:layout_marginBottom="8dp"
-        android:text="name"
+        android:text="name : %1s"
         android:textColor="@android:color/white"
 
         android:textSize="45sp"
@@ -66,8 +66,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name"
         app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+        />
 
     <TextView
         android:id="@+id/textView_height"
@@ -85,7 +86,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_gender"
-        app:layout_constraintVertical_bias="0.05"        />
+        app:layout_constraintVertical_bias="0.05"
+        />
 
     <TextView
         android:id="@+id/textView_mass"

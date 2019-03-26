@@ -18,8 +18,16 @@ public class SecondActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-
     private MainController controller;
+
+    private static final String NAME = "name";
+    private static final String GENDER = "gender";
+    private static final String HEIGHT = "height";
+    private static final String MASS = "mass";
+    private static final String HAIR_COLOR = "hair_color";
+    private static final String EYE_COLOR = "eye_color";
+    private static final String BIRTH_YEAR = "birth_year";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +53,13 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onItemClick(People item){
                 Intent intent = new Intent( SecondActivity.this, ThirdActivity.class);
-                intent.putExtra("nom", item.getName());
-                intent.putExtra("gender", item.getGender());
-                intent.putExtra("height", item.getName());
-                intent.putExtra("mass", item.getMass());
-                intent.putExtra("hair_color", item.getHairColor());
-                intent.putExtra("eye_color", item.getEyeColor());
-                intent.putExtra("birth_year", item.getBirthYear());
+                intent.putExtra(NAME, item.getName());
+                intent.putExtra(GENDER, item.getGender());
+                intent.putExtra(HEIGHT, item.getHeight());
+                intent.putExtra(MASS, item.getMass());
+                intent.putExtra(HAIR_COLOR, item.getHairColor());
+                intent.putExtra(EYE_COLOR, item.getEyeColor());
+                intent.putExtra(BIRTH_YEAR, item.getBirthYear());
                 SecondActivity.this.startActivity(intent);
             }
         });
