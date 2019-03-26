@@ -38,10 +38,10 @@
         android:layout_marginRight="8dp"
 
         android:layout_marginBottom="8dp"
-        android:text="name : %1s"
+        android:text="name"
         android:textColor="@android:color/white"
 
-        android:textSize="45sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
