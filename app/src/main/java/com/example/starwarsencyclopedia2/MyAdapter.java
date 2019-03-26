@@ -97,6 +97,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava>
         final People currentPeople = listValues.get(position);
         final String name = currentPeople.getName();
         final String gender = currentPeople.getGender();
+        final String height = currentPeople.getHeight();
+        final String mass = currentPeople.getMass();
+
+        final String hair_color = currentPeople.getHairColor();
+        final String eye_color = currentPeople.getEyeColor();
+        final String birth_year = currentPeople.getBirthYear();
+
+
         holder.txtHeader.setText(name);
         holder.txtHeader.setOnClickListener( new View.OnClickListener() {
             @Override

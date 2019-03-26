@@ -45,8 +45,13 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onItemClick(People item){
                 Intent intent = new Intent( SecondActivity.this, ThirdActivity.class);
-                //intent.putExtra("nom", item.getName());
-                //intent.putExtra("gender", item.getGender());
+                intent.putExtra("nom", item.getName());
+                intent.putExtra("gender", item.getGender());
+                intent.putExtra("height", item.getName());
+                intent.putExtra("mass", item.getMass());
+                intent.putExtra("hair_color", item.getHairColor());
+                intent.putExtra("eye_color", item.getEyeColor());
+                intent.putExtra("birth_year", item.getBirthYear());
                 SecondActivity.this.startActivity(intent);
             }
         });
