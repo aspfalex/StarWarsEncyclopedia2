@@ -3,7 +3,8 @@
 
 ## Introduction
 
-Projet d'une application mobile codée en java.
+Projet d'une application mobile codée en java. 
+
 Cette application affiche une liste des personnages de Star Wars en s'aidant de SWAPI, l'API de la fameuse saga de films.
  
 
